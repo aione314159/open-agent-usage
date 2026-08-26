@@ -57,7 +57,13 @@ This is a preview build. A notarized build is planned for a future release; unti
 
 ### Opening an unnotarized app (main method)
 
-In Finder, **Control-click** the app in your Applications folder, choose **Open**, then click **Open** again in the dialog that appears. You only need to do this once — after that, the app opens normally.
+On macOS 15 and later, Control-clicking the app no longer works around this — the warning it shows offers only a **Done** button. Use System Settings instead:
+
+1. Double-click the app once. macOS refuses to open it; dismiss the warning.
+2. Open **System Settings → Privacy & Security** and scroll down to **Security**. A line appears saying the app was blocked.
+3. Click **Open Anyway**, then confirm.
+
+You only need to do this once — after that, the app opens normally.
 
 ### Alternative: Terminal
 
