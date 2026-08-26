@@ -51,25 +51,7 @@ Every new install gets a 30-day trial with all Pro features unlocked, no account
 
 1. Download the latest `.dmg` (or `.zip`) from [Releases](../../releases/latest).
 2. Open the disk image and drag **Open Agent Usage** into your **Applications** folder.
-3. This build is **not notarized by Apple**, so macOS Gatekeeper will block the first launch. See below for how to open it.
-
-This is a preview build. A notarized build is planned for a future release; until then, opening the app requires one of the steps below.
-
-### Opening an unnotarized app (main method)
-
-On macOS 15 and later, Control-clicking the app no longer works around this — the warning it shows offers only a **Done** button. Use System Settings instead:
-
-1. Double-click the app once. macOS refuses to open it; dismiss the warning.
-2. Open **System Settings → Privacy & Security** and scroll down to **Security**. A line appears saying the app was blocked.
-3. Click **Open Anyway**, then confirm.
-
-You only need to do this once — after that, the app opens normally.
-
-### Alternative: Terminal
-
-```bash
-xattr -dr com.apple.quarantine /Applications/OpenAgentUsage.app
-```
+3. Double-click it. It opens like any other app — the build is signed with a Developer ID certificate and notarized by Apple, so Gatekeeper lets it through with no warning and no workaround.
 
 ## Additional Setup
 

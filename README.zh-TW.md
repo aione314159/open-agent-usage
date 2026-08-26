@@ -51,25 +51,7 @@
 
 1. 從 [Releases](../../releases/latest) 下載最新的 `.dmg`（或 `.zip`）。
 2. 打開磁碟映像檔，把 **Open Agent Usage** 拖進 **Applications** 資料夾。
-3. 這個版本**尚未經過 Apple 公證**，所以 macOS 的 Gatekeeper 第一次開啟時會擋下來。請看下面的開啟方式。
-
-這是一個預覽版本，之後會推出經過公證的正式版；在那之前，開啟這個 App 需要以下其中一種方式。
-
-### 開啟未公證的 App（主要做法）
-
-macOS 15 之後，按住 Control 點一下已經繞不過去了——它跳出的警告只有「完成」一個按鈕。改用系統設定：
-
-1. 先按兩下 App。macOS 會拒絕開啟，把警告關掉。
-2. 打開**系統設定 → 隱私權與安全性**，往下捲到**「安全性」**，會看到一行說這個 App 已被阻擋。
-3. 按**「強制打開」**，再確認一次。
-
-只需要做一次，之後就可以正常開啟。
-
-### 替代做法：終端機
-
-```bash
-xattr -dr com.apple.quarantine /Applications/OpenAgentUsage.app
-```
+3. 按兩下就能開。這個版本以 Developer ID 憑證簽章並經過 Apple 公證，Gatekeeper 直接放行，不會跳警告，也不需要任何繞道步驟。
 
 ## 額外設定
 
