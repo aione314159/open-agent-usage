@@ -18,6 +18,7 @@ Colour always follows how much has been consumed: green at 30% or below, blue at
 
 - **All four agents in one strip** — Claude Code, Codex, Gemini, and Antigravity quotas side by side, so you don't have to open four different apps to check what's left.
 - **Click a session to jump to it** — the panel lists your recent Claude Code sessions with project, branch, model, and what each one is doing; click one to switch straight to that window. (Pro)
+- **Switch Claude Code accounts in one click** — keep a personal and a work subscription side by side and move between them without signing out, so you never wait for another verification email. (Pro)
 - **Everything stays on your Mac** — usage is read from files that already exist locally, nothing is uploaded. The only exception is a one-time check with Gumroad when you activate a Pro license.
 - **Light and dark, either automatic or pinned** — the strip and panel follow macOS appearance by default, or you can force Light or Dark from Settings.
 - **Four languages** — English, Traditional Chinese, Japanese, and Korean, switchable instantly with no restart.
@@ -39,6 +40,22 @@ Project names, terminal commands, and account emails in these screenshots are bl
 
 The same panel in dark (left) and light (right) appearance.
 
+## Switching Claude Code accounts
+
+If you have a personal Claude subscription and a work one, you know the routine: run out on one, sign out, sign in to the other, wait for the verification email, click the link. Every time.
+
+![Account switching](docs/account-switch.en.png)
+
+The panel does it in one click, and the reason it can is that it never signs out.
+
+Signing out deletes the refresh token along with everything else, which is exactly what makes the next sign-in need another emailed link. Copying the credential and writing it back later revokes nothing — the account you switched away from is still signed in when you come back, for as long as its refresh token lives. That is about four weeks, renewed every time Claude Code uses it, so an account you return to now and then never expires.
+
+Each saved account is a button on the Claude Code card. The one in use is ticked and inert, and every button shows how long its refresh token has left — amber three days out, red and disabled once it expires, because a token that quietly runs out is the thing this is meant to prevent. A `claude` you already have open picks the new account up on its own; there is nothing to restart.
+
+Adding an account is done once per account, in a terminal, with a command that ships inside the app and installs itself from the help window. After that, switching is just the button.
+
+Your credentials stay on your Mac, owner-readable only, and `~/.claude.json` is backed up before every write. Nothing is uploaded.
+
 ## Free vs Pro
 
 | | Free | Pro |
@@ -48,6 +65,7 @@ The same panel in dark (left) and light (right) appearance.
 | 4 languages (English, Traditional Chinese, Japanese, Korean) | Yes | Yes |
 | Expandable panel with account, plan, and per-window usage | Yes | Yes |
 | Session list (see what each Claude Code session is doing, click to jump to it) | No | Yes |
+| Claude Code account switching (no sign-out, no verification email) | No | Yes |
 | `open-agent-usage` command-line interface for AI agents | No | Yes |
 | Price | Free | US$4.99, one-time |
 
@@ -135,6 +153,21 @@ Scrolling down shows the price (**US$4.99**) and a **Buy on Gumroad** button, pl
 ![Settings — About](docs/settings-about.png)
 
 The version number, license (**Proprietary**), system requirement (**macOS 15.0+**), and a data statement (**Read locally only**), plus the developer name and a feedback email with a copy button.
+
+## How it reads your usage
+
+Four agents, four completely different mechanisms. None of them is asked over the network — every number comes off this Mac.
+
+![How usage is read](docs/quota-sources.en.png)
+
+- **Claude Code** hands its quota to the status line command and writes it nowhere, which is why the bridge script is needed: it wraps that command, keeps a copy, and passes the original output through untouched.
+- **Codex** keeps its own records, so they are read straight from `~/.codex`.
+- **Gemini** has no file to read at all. The numbers are taken off its own window through macOS Accessibility, which is why that permission is asked for.
+- **Antigravity** answers on a local port that changes every launch, so the port is located first and matched against the process name before anything is sent.
+
+The whole picture, account switching included:
+
+![Architecture](docs/architecture.en.png)
 
 ## Buy Pro
 

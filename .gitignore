@@ -1,1 +1,18 @@
+# This repository carries the READMEs, the screenshots and the release
+# attachments — nothing else. The rules below are guards rather than needs:
+# none of these directories exists here, and none of them should ever arrive.
+
 .DS_Store
+
+# Build output and dependencies, if a build ever runs in this directory
+dist/
+node_modules/
+
+# Editor and tooling state
+.obsidian/
+.vscode/
+
+# Working notes and project state that belong to the private source repository
+.open_bull/
+cli/
+CLAUDE.md
