@@ -44,7 +44,13 @@ The same panel in dark (left) and light (right) appearance.
 
 If you have a personal Claude subscription and a work one, you know the routine: run out on one, sign out, sign in to the other, wait for the verification email, click the link. Every time.
 
-![Account switching](docs/account-switch.en.png)
+![The Claude Code card, with the account buttons numbered](docs/account-switch-annotated.png)
+
+The email is blurred on purpose. On the Claude Code card:
+
+1. **A saved account you are not on** — one click moves to it. Underneath, how long its sign-in has left.
+2. **The account in use** — ticked and not clickable. Amber under three days, red and disabled once expired, so a sign-in never runs out without warning.
+3. **Help** — how to add an account, with the command ready to copy.
 
 The panel does it in one click, and the reason it can is that it never signs out.
 
@@ -55,6 +61,21 @@ Each saved account is a button on the Claude Code card. The one in use is ticked
 Adding an account is done once per account, in a terminal, with a command that ships inside the app and installs itself from the help window. After that, switching is just the button.
 
 Your credentials stay on your Mac, owner-readable only, and `~/.claude.json` is backed up before every write. Nothing is uploaded.
+
+## How it reads your usage
+
+Four agents, four completely different mechanisms. None of them is asked over the network — every number comes off this Mac.
+
+![How usage is read](docs/quota-sources.en.png)
+
+- **Claude Code** hands its quota to the status line command and writes it nowhere, which is why the bridge script is needed: it wraps that command, keeps a copy, and passes the original output through untouched.
+- **Codex** keeps its own records, so they are read straight from `~/.codex`.
+- **Gemini** has no file to read at all. The numbers are taken off its own window through macOS Accessibility, which is why that permission is asked for.
+- **Antigravity** answers on a local port that changes every launch, so the port is located first and matched against the process name before anything is sent.
+
+The whole picture, account switching included:
+
+![Architecture](docs/architecture.en.png)
 
 ## Free vs Pro
 
@@ -153,21 +174,6 @@ Scrolling down shows the price (**US$4.99**) and a **Buy on Gumroad** button, pl
 ![Settings — About](docs/settings-about.png)
 
 The version number, license (**Proprietary**), system requirement (**macOS 15.0+**), and a data statement (**Read locally only**), plus the developer name and a feedback email with a copy button.
-
-## How it reads your usage
-
-Four agents, four completely different mechanisms. None of them is asked over the network — every number comes off this Mac.
-
-![How usage is read](docs/quota-sources.en.png)
-
-- **Claude Code** hands its quota to the status line command and writes it nowhere, which is why the bridge script is needed: it wraps that command, keeps a copy, and passes the original output through untouched.
-- **Codex** keeps its own records, so they are read straight from `~/.codex`.
-- **Gemini** has no file to read at all. The numbers are taken off its own window through macOS Accessibility, which is why that permission is asked for.
-- **Antigravity** answers on a local port that changes every launch, so the port is located first and matched against the process name before anything is sent.
-
-The whole picture, account switching included:
-
-![Architecture](docs/architecture.en.png)
 
 ## Buy Pro
 
