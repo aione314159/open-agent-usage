@@ -4,9 +4,15 @@
 
 一款 macOS 選單列常駐 App，顯示你的 AI coding agent 用量配額還剩多少，涵蓋 **Claude Code**、**Codex**、**Gemini**、**Antigravity** 四個服務。
 
-![選單列，收合狀態](docs/menubar-strip.png)
+![選單列，含編號標示](docs/menubar-strip-annotated.png)
 
-平常就長這樣：選單列上一小條，每個 agent 一個圖示配一個百分比。
+平常就長這樣：選單列上一小條，每個 agent 一個圖示配一個百分比。上圖這台機器同時跑著三個 agent。
+
+1. **Claude Code** — 5 小時視窗，最先打斷手上工作的那條限制。7 天視窗在展開面板裡。
+2. **Codex** — 目前視窗的用量。
+3. **Antigravity** — Gemini 模型的配額；第三方模型的配額在展開面板裡。
+
+顏色一律跟著已用量走：30% 以下綠色、60% 以下藍色、80% 以下橘色、超過 80% 紅色。有在跑但讀不到數字的 agent（例如還沒裝橋接的 Claude Code）會留在原位顯示灰色的 `--`，所以圖示從這條上消失，就只代表那個 agent 停了。
 
 ## 關鍵功能
 

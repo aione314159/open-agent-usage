@@ -4,9 +4,15 @@
 
 A macOS menu bar app that shows how much of your AI coding agent quota you have used, for **Claude Code**, **Codex**, **Gemini**, and **Antigravity**.
 
-![Menu bar, collapsed](docs/menubar-strip.png)
+![Menu bar strip with numbered callouts](docs/menubar-strip-annotated.png)
 
-This is what it looks like most of the time: a small strip in the menu bar with an icon and a percentage per agent.
+This is what it looks like most of the time: a small strip in the menu bar with an icon and a percentage per agent. Three agents are running in the capture above.
+
+1. **Claude Code** — the 5-hour window, the limit that interrupts a working session first. Its 7-day window is in the panel.
+2. **Codex** — usage in the current window.
+3. **Antigravity** — the Gemini model quota; the third-party model quota is in the panel.
+
+Colour always follows how much has been consumed: green at 30% or below, blue at 60% or below, orange at 80% or below, red above 80%. An agent that is running but has no number to give — Claude Code before its bridge is installed — keeps its place and shows `--` in grey, so an icon leaving the strip only ever means that agent has stopped.
 
 ## Key features
 
