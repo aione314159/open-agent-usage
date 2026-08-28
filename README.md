@@ -1,10 +1,27 @@
-[English](README.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
+<div align="center">
 
-# Open Agent Usage
+[English](README.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 ![Open Agent Usage — Your AI usage. At a glance.](docs/hero.en.png)
 
+# Open Agent Usage
+
+**Claude Code · Codex · Gemini · Antigravity quota, live in the macOS menu bar.**
+
+[![release](https://img.shields.io/github/v/release/aione314159/open-agent-usage?label=release&color=8957e5)](../../releases/latest)
+[![downloads](https://img.shields.io/github/downloads/aione314159/open-agent-usage/total?label=downloads&color=2ea043)](../../releases)
+[![macOS 15+](https://img.shields.io/badge/macOS-15%2B-000000?logo=apple&logoColor=white)](#system-requirements)
+[![Apple silicon + Intel](https://img.shields.io/badge/Apple%20silicon%20%2B%20Intel-universal-555555)](#system-requirements)
+[![Notarised](https://img.shields.io/badge/Notarised-Developer%20ID-0a7ea4)](#installation)
+[![License](https://img.shields.io/badge/License-Proprietary-9e9e9e)](LICENSE)
+
 A macOS app that shows how much of your AI coding agent quota you have used, for **Claude Code**, **Codex**, **Gemini**, and **Antigravity** — in the menu bar, or joined to the notch as a Dynamic Island.
+
+[📥 Download](../../releases/latest) · [💡 Features](#key-features) · [⚙️ Setup](#additional-setup) · [🔄 Account switching](#switching-claude-code-accounts) · [🐞 Report an issue](../../issues/new)
+
+</div>
+
+---
 
 ![Menu bar strip with numbered callouts](docs/menubar-strip-annotated.png)
 

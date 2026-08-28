@@ -1,10 +1,27 @@
-[English](README.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
+<div align="center">
 
-# Open Agent Usage
+[English](README.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 ![Open Agent Usage — 一眼掌握你的 AI 用量。](docs/hero.zhHant.png)
 
+# Open Agent Usage
+
+**Claude Code · Codex · Gemini · Antigravity 的用量配額，直接顯示在 macOS 選單列。**
+
+[![版本](https://img.shields.io/github/v/release/aione314159/open-agent-usage?label=%E7%89%88%E6%9C%AC&color=8957e5)](../../releases/latest)
+[![下載次數](https://img.shields.io/github/downloads/aione314159/open-agent-usage/total?label=%E4%B8%8B%E8%BC%89%E6%AC%A1%E6%95%B8&color=2ea043)](../../releases)
+[![macOS 15+](https://img.shields.io/badge/macOS-15%2B-000000?logo=apple&logoColor=white)](#系統需求)
+[![Apple silicon + Intel](https://img.shields.io/badge/Apple%20silicon%20%2B%20Intel-%E9%80%9A%E7%94%A8%E4%BA%8C%E9%80%B2%E4%BD%8D-555555)](#系統需求)
+[![Apple 公證](https://img.shields.io/badge/Apple%20%E5%85%AC%E8%AD%89-Developer%20ID-0a7ea4)](#安裝)
+[![授權](https://img.shields.io/badge/%E6%8E%88%E6%AC%8A-%E5%B0%88%E6%9C%89%E8%BB%9F%E9%AB%94-9e9e9e)](LICENSE)
+
 一款 macOS 常駐 App，顯示你的 AI coding agent 用量配額還剩多少，涵蓋 **Claude Code**、**Codex**、**Gemini**、**Antigravity** 四個服務。可以顯示在選單列，也可以接在瀏海旁做成動態島。
+
+[📥 下載](../../releases/latest) · [💡 功能](#關鍵功能) · [⚙️ 設定](#額外設定) · [🔄 帳號切換](#切換-claude-code-帳號) · [🐞 回報問題](../../issues/new)
+
+</div>
+
+---
 
 ![選單列，含編號標示](docs/menubar-strip-annotated.png)
 

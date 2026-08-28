@@ -1,10 +1,27 @@
-[English](README.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
+<div align="center">
 
-# Open Agent Usage
+[English](README.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
 ![Open Agent Usage — AIの利用状況を、ひと目で。](docs/hero.ja.png)
 
+# Open Agent Usage
+
+**Claude Code · Codex · Gemini · Antigravity の利用枠を、macOS のメニューバーに。**
+
+[![バージョン](https://img.shields.io/github/v/release/aione314159/open-agent-usage?label=%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3&color=8957e5)](../../releases/latest)
+[![ダウンロード数](https://img.shields.io/github/downloads/aione314159/open-agent-usage/total?label=%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E6%95%B0&color=2ea043)](../../releases)
+[![macOS 15+](https://img.shields.io/badge/macOS-15%2B-000000?logo=apple&logoColor=white)](#動作環境)
+[![Apple silicon + Intel](https://img.shields.io/badge/Apple%20silicon%20%2B%20Intel-%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB-555555)](#動作環境)
+[![Apple 公証](https://img.shields.io/badge/Apple%20%E5%85%AC%E8%A8%BC-Developer%20ID-0a7ea4)](#インストール)
+[![ライセンス](https://img.shields.io/badge/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9-%E3%83%97%E3%83%AD%E3%83%97%E3%83%A9%E3%82%A4%E3%82%A8%E3%82%BF%E3%83%AA-9e9e9e)](LICENSE)
+
 AI コーディングエージェントの利用枠がどれだけ残っているかを表示する macOS 常駐アプリです。対応サービスは **Claude Code**、**Codex**、**Gemini**、**Antigravity** の 4 つ。メニューバーにも、ノッチにつながるダイナミックアイランドとしても表示できます。
+
+[📥 ダウンロード](../../releases/latest) · [💡 機能](#主な機能) · [⚙️ 設定](#追加設定) · [🔄 アカウント切り替え](#claude-code-のアカウント切り替え) · [🐞 不具合を報告](../../issues/new)
+
+</div>
+
+---
 
 ![メニューバー、番号付きの説明](docs/menubar-strip-annotated.png)
 
