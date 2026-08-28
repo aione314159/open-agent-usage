@@ -2,11 +2,11 @@
 
 # Open Agent Usage
 
-A macOS menu bar app that shows how much of your AI coding agent quota you have used, for **Claude Code**, **Codex**, **Gemini**, and **Antigravity**.
+A macOS app that shows how much of your AI coding agent quota you have used, for **Claude Code**, **Codex**, **Gemini**, and **Antigravity** — in the menu bar, or joined to the notch as a Dynamic Island.
 
 ![Menu bar strip with numbered callouts](docs/menubar-strip-annotated.png)
 
-This is what it looks like most of the time: a small strip in the menu bar with an icon and a percentage per agent. Three agents are running in the capture above.
+This is what it looks like most of the time: a small strip with an icon and a percentage per agent. Three agents are running in the capture above. The strip lives in the menu bar on a Mac without a notch, and joins the notch as a Dynamic Island on one that has it — pick either in Settings.
 
 1. **Claude Code** — the 5-hour window, the limit that interrupts a working session first. Its 7-day window is in the panel.
 2. **Codex** — usage in the current window.
@@ -16,6 +16,7 @@ Colour always follows how much has been consumed: green at 30% or below, blue at
 
 ## Key features
 
+- **Notch or menu bar, whichever your Mac has** — the strip joins the notch as a Dynamic Island where there is one to merge with, and becomes a menu bar item where there is not. Detected on its own, and switchable in Settings.
 - **All four agents in one strip** — Claude Code, Codex, Gemini, and Antigravity quotas side by side, so you don't have to open four different apps to check what's left.
 - **Click a session to jump to it** — the panel lists your recent Claude Code sessions with project, branch, model, and what each one is doing; click one to switch straight to that window. (Pro)
 - **Switch Claude Code accounts in one click** — keep a personal and a work subscription side by side and move between them without signing out, so you never wait for another verification email. (Pro)
@@ -141,7 +142,7 @@ Scrolling down the same page shows **11 accent colors** — from Ocean Blue and 
 
 ![Settings — Dynamic Island](docs/settings-island.png)
 
-**Show quota on the notch** draws a quota strip that joins the notch of the built-in display, so the notch appears to widen; click it to see the detail. **Expand on hover** opens the detail on hover as well as on click — it's off by default, since a sheet that appears whenever the pointer passes the notch is easy to trigger by accident. **Show time until reset** appends the remaining time after each percentage, for example `51% 1h59m`.
+**Show the quota strip** draws the readings at the top of the screen, either joined to the notch or as a menu bar item; click it to see the detail. **Where to show it** picks between the two: the island joins the notch of the built-in display, the menu bar puts the same readings in a status item. Dynamic Island is the default, and a display with no notch falls back to the menu bar on its own — there is no cutout there for the island to merge with. **Expand on hover** opens the detail on hover as well as on click — it's off by default, since a sheet that appears whenever the pointer passes the notch is easy to trigger by accident. **Show time until reset** appends the remaining time after each percentage, for example `51% 1h59m`.
 
 ![Settings — Dynamic Island, expanded options](docs/settings-island-expanded.png)
 

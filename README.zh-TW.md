@@ -2,11 +2,11 @@
 
 # Open Agent Usage
 
-一款 macOS 選單列常駐 App，顯示你的 AI coding agent 用量配額還剩多少，涵蓋 **Claude Code**、**Codex**、**Gemini**、**Antigravity** 四個服務。
+一款 macOS 常駐 App，顯示你的 AI coding agent 用量配額還剩多少，涵蓋 **Claude Code**、**Codex**、**Gemini**、**Antigravity** 四個服務。可以顯示在選單列，也可以接在瀏海旁做成動態島。
 
 ![選單列，含編號標示](docs/menubar-strip-annotated.png)
 
-平常就長這樣：選單列上一小條，每個 agent 一個圖示配一個百分比。上圖這台機器同時跑著三個 agent。
+平常就長這樣：一小條，每個 agent 一個圖示配一個百分比。上圖這台機器同時跑著三個 agent。沒有瀏海的 Mac 顯示在選單列，有瀏海的 Mac 接在瀏海旁成為動態島，兩種位置都能在設定裡自己選。
 
 1. **Claude Code** — 5 小時視窗，最先打斷手上工作的那條限制。7 天視窗在展開面板裡。
 2. **Codex** — 目前視窗的用量。
@@ -16,6 +16,7 @@
 
 ## 關鍵功能
 
+- **瀏海或選單列，看你的 Mac 有什麼** — 有瀏海就接在瀏海旁成為動態島，沒有就變成選單列圖示。會自動判斷，也能在設定裡自己指定。
 - **四個 agent 並排看** — Claude Code、Codex、Gemini、Antigravity 的配額並排顯示，不必開四個不同的 App 才能查剩多少。
 - **點一下 session 就切過去** — 面板列出最近的 Claude Code session，顯示專案、分支、模型與各自在做什麼，點一下就直接切到那個視窗。（Pro）
 - **資料完全不出你的 Mac** — 用量都是從本機既有的檔案讀取，不會上傳任何東西。唯一的例外是啟用 Pro 授權時，會連一次 Gumroad 做驗證。
@@ -141,7 +142,7 @@ Gemini App 沒有在執行時，選單列面板裡的 Gemini 那一列會自動�
 
 ![設定 — Dynamic Island](docs/settings-island.png)
 
-**Show quota on the notch** 會畫出一條配額列，跟內建螢幕的瀏海接在一起，看起來像瀏海變寬了，點一下就能看到詳細內容。**Expand on hover** 讓滑鼠移過去也會展開，不只是點擊——預設關閉，因為指標一經過瀏海就跳出來的面板很容易誤觸。**Show time until reset** 會在每個百分比後面加上剩餘時間，例如 `51% 1h59m`。
+**Show the quota strip** 會在螢幕頂端顯示各項讀數，可以接在瀏海旁，也可以放進選單列，點一下就能看到詳細內容。**Where to show it** 就是在這兩者之間選：動態島接在內建螢幕的瀏海旁，選單列則把同樣的讀數放進狀態列圖示。預設是動態島；沒有瀏海的螢幕會自動退回選單列，因為那裡沒有可以相接的缺口。**Expand on hover** 讓滑鼠移過去也會展開，不只是點擊——預設關閉，因為指標一經過瀏海就跳出來的面板很容易誤觸。**Show time until reset** 會在每個百分比後面加上剩餘時間，例如 `51% 1h59m`。
 
 ![設定 — Dynamic Island，展開選項](docs/settings-island-expanded.png)
 
