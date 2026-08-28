@@ -2,6 +2,8 @@
 
 # Open Agent Usage
 
+![Open Agent Usage — Your AI usage. At a glance.](docs/hero.en.png)
+
 A macOS app that shows how much of your AI coding agent quota you have used, for **Claude Code**, **Codex**, **Gemini**, and **Antigravity** — in the menu bar, or joined to the notch as a Dynamic Island.
 
 ![Menu bar strip with numbered callouts](docs/menubar-strip-annotated.png)

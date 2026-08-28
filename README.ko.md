@@ -2,6 +2,8 @@
 
 # Open Agent Usage
 
+![Open Agent Usage — AI 사용량을 한눈에.](docs/hero.ko.png)
+
 AI 코딩 에이전트의 사용량 할당량이 얼마나 남았는지 보여주는 macOS 상주 앱입니다. **Claude Code**, **Codex**, **Gemini**, **Antigravity** 네 가지 서비스를 지원하며, 메뉴 막대에도 노치에 이어지는 다이내믹 아일랜드로도 표시할 수 있습니다.
 
 ![메뉴 막대, 번호 설명 포함](docs/menubar-strip-annotated.png)

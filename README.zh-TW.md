@@ -2,6 +2,8 @@
 
 # Open Agent Usage
 
+![Open Agent Usage — 一眼掌握你的 AI 用量。](docs/hero.zhHant.png)
+
 一款 macOS 常駐 App，顯示你的 AI coding agent 用量配額還剩多少，涵蓋 **Claude Code**、**Codex**、**Gemini**、**Antigravity** 四個服務。可以顯示在選單列，也可以接在瀏海旁做成動態島。
 
 ![選單列，含編號標示](docs/menubar-strip-annotated.png)

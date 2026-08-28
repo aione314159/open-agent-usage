@@ -2,6 +2,8 @@
 
 # Open Agent Usage
 
+![Open Agent Usage — AIの利用状況を、ひと目で。](docs/hero.ja.png)
+
 AI コーディングエージェントの利用枠がどれだけ残っているかを表示する macOS 常駐アプリです。対応サービスは **Claude Code**、**Codex**、**Gemini**、**Antigravity** の 4 つ。メニューバーにも、ノッチにつながるダイナミックアイランドとしても表示できます。
 
 ![メニューバー、番号付きの説明](docs/menubar-strip-annotated.png)
