@@ -31,13 +31,13 @@
 2. **Codex** — 目前視窗的用量。
 3. **Antigravity** — Gemini 模型的配額；第三方模型的配額在展開面板裡。
 
-顏色一律跟著已用量走：30% 以下綠色、60% 以下藍色、80% 以下橘色、超過 80% 紅色。有在跑但讀不到數字的 agent（例如還沒裝橋接的 Claude Code）會留在原位顯示灰色的 `--`，所以圖示從這條上消失，就只代表那個 agent 停了。
+百分比預設顯示已用量，設定裡可以一次全部改成顯示剩餘量。無論哪一種，顏色一律跟著已用量走：30% 以下綠色、60% 以下藍色、80% 以下橘色、超過 80% 紅色。有在跑但讀不到數字的 agent（例如還沒裝橋接的 Claude Code）會留在原位顯示灰色的 `--`，所以圖示從這條上消失，就只代表那個 agent 停了。
 
 ## 關鍵功能
 
 - **瀏海或選單列，看你的 Mac 有什麼** — 有瀏海就接在瀏海旁成為動態島，沒有就變成選單列圖示。會自動判斷，也能在設定裡自己指定。
 - **四個 agent 並排看** — Claude Code、Codex、Gemini、Antigravity 的配額並排顯示，不必開四個不同的 App 才能查剩多少。
-- **點一下 session 就切過去** — 面板列出最近的 Claude Code session，顯示專案、分支、模型與各自在做什麼，點一下就直接切到那個視窗。（Pro）
+- **點一下 session 就切過去** — 面板列出最近的 Claude Code session，顯示專案、分支、模型與各自在做什麼，點一下就直接切到那個視窗。
 - **資料完全不出你的 Mac** — 用量都是從本機既有的檔案讀取，不會上傳任何東西。唯一的例外是啟用 Pro 授權時，會連一次 Gumroad 做驗證。
 - **淺色深色，自動或自選** — 選單列與面板預設跟著 macOS 外觀走，也可以在設定裡強制固定成淺色或深色。
 - **4 種語言** — 英文、繁體中文、日文、韓文，切換立即生效，不用重開 App。
@@ -105,7 +105,7 @@
 | 淺色／深色外觀、11 種強調色 | 有 | 有 |
 | 4 種語言（英／繁中／日／韓） | 有 | 有 |
 | 展開面板看帳號、方案、各時間窗用量 | 有 | 有 |
-| Session 清單（看每個 Claude Code session 在做什麼，點一下切過去） | 無 | 有 |
+| Session 清單（看每個 Claude Code session 在做什麼，點一下切過去） | 有 | 有 |
 | Claude Code 帳號切換（不登出、不必收驗證信） | 無 | 有 |
 | `open-agent-usage` 命令列介面，給 AI agent 呼叫 | 無 | 有 |
 | 價格 | 免費 | US$4.99，一次買斷 |
@@ -151,7 +151,7 @@ Gemini App 沒有在執行時，選單列面板裡的 Gemini 那一列會自動�
 
 ![設定 — Appearance](docs/settings-appearance.png)
 
-**Language** 立即生效，不用重開 App。**Theme** 預設跟著 macOS 走，也可以固定成 **Light** 或 **Dark**。**Text size**（Small／Medium／Large）會同時縮放選單列與這個設定視窗。
+**Language** 立即生效，不用重開 App。**Theme** 預設跟著 macOS 走，也可以固定成 **Light** 或 **Dark**。**Text size**（Small／Medium／Large）會同時縮放選單列與這個設定視窗。**數值顯示**把四個服務一起切換成顯示已用量或剩餘量；顏色仍然跟著已用量，紅色永遠代表快用完。
 
 ![設定 — Appearance，強調色清單](docs/settings-appearance-accents.png)
 
@@ -183,7 +183,7 @@ Gemini App 沒有在執行時，選單列面板裡的 Gemini 那一列會自動�
 
 ![設定 — Purchase](docs/settings-purchase.png)
 
-頁面上半顯示目前的授權狀態，試用期間會顯示還剩幾天。下面的 **Free and Pro** 對照表列出哪些功能是免費的（配額列）、哪些是 Pro 限定（session 清單，以及 `open-agent-usage` 命令列介面）——試用期結束後，只有標 Pro 的項目會停用。
+頁面上半顯示目前的授權狀態，試用期間會顯示還剩幾天。下面的 **Free and Pro** 對照表列出哪些功能是免費的（配額列）、哪些是 Pro 限定（Claude Code 帳號切換，以及 `open-agent-usage` 命令列介面）——試用期結束後，只有標 Pro 的項目會停用。
 
 ![設定 — Purchase，購買與啟用](docs/settings-purchase-buy.png)
 

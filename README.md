@@ -31,13 +31,13 @@ This is what it looks like most of the time: a small strip with an icon and a pe
 2. **Codex** — usage in the current window.
 3. **Antigravity** — the Gemini model quota; the third-party model quota is in the panel.
 
-Colour always follows how much has been consumed: green at 30% or below, blue at 60% or below, orange at 80% or below, red above 80%. An agent that is running but has no number to give — Claude Code before its bridge is installed — keeps its place and shows `--` in grey, so an icon leaving the strip only ever means that agent has stopped.
+Percentages are consumed usage by default, and Settings can switch them all to what is left instead. Colour always follows how much has been consumed either way: green at 30% or below, blue at 60% or below, orange at 80% or below, red above 80%. An agent that is running but has no number to give — Claude Code before its bridge is installed — keeps its place and shows `--` in grey, so an icon leaving the strip only ever means that agent has stopped.
 
 ## Key features
 
 - **Notch or menu bar, whichever your Mac has** — the strip joins the notch as a Dynamic Island where there is one to merge with, and becomes a menu bar item where there is not. Detected on its own, and switchable in Settings.
 - **All four agents in one strip** — Claude Code, Codex, Gemini, and Antigravity quotas side by side, so you don't have to open four different apps to check what's left.
-- **Click a session to jump to it** — the panel lists your recent Claude Code sessions with project, branch, model, and what each one is doing; click one to switch straight to that window. (Pro)
+- **Click a session to jump to it** — the panel lists your recent Claude Code sessions with project, branch, model, and what each one is doing; click one to switch straight to that window.
 - **Switch Claude Code accounts in one click** — keep a personal and a work subscription side by side and move between them without signing out, so you never wait for another verification email. (Pro)
 - **Everything stays on your Mac** — usage is read from files that already exist locally, nothing is uploaded. The only exception is a one-time check with Gumroad when you activate a Pro license.
 - **Light and dark, either automatic or pinned** — the strip and panel follow macOS appearance by default, or you can force Light or Dark from Settings.
@@ -105,7 +105,7 @@ The whole picture, account switching included:
 | Light / dark appearance, 11 accent colors | Yes | Yes |
 | 4 languages (English, Traditional Chinese, Japanese, Korean) | Yes | Yes |
 | Expandable panel with account, plan, and per-window usage | Yes | Yes |
-| Session list (see what each Claude Code session is doing, click to jump to it) | No | Yes |
+| Session list (see what each Claude Code session is doing, click to jump to it) | Yes | Yes |
 | Claude Code account switching (no sign-out, no verification email) | No | Yes |
 | `open-agent-usage` command-line interface for AI agents | No | Yes |
 | Price | Free | US$4.99, one-time |
@@ -151,7 +151,7 @@ If the Gemini app is not running, the Gemini row in the menu bar panel hides its
 
 ![Settings — Appearance](docs/settings-appearance.png)
 
-**Language** takes effect immediately, no restart needed. **Theme** follows macOS by default, or you can pin **Light** or **Dark**. **Text size** (Small / Medium / Large) scales the strip and this settings window together.
+**Language** takes effect immediately, no restart needed. **Theme** follows macOS by default, or you can pin **Light** or **Dark**. **Text size** (Small / Medium / Large) scales the strip and this settings window together. **Percentages** switches every service between showing what has been used and what is left; colour keeps following consumption, so red still means nearly out.
 
 ![Settings — Appearance, accent colors](docs/settings-appearance-accents.png)
 
@@ -183,7 +183,7 @@ Scrolling down, the **When expanded** section controls what the full panel shows
 
 ![Settings — Purchase](docs/settings-purchase.png)
 
-The top of the page shows your current license status and, during the trial, how many days are left. Below that, a **Free and Pro** table lists exactly which features are Free (the quota strip) and which are Pro (the session list, and the `open-agent-usage` command-line interface) — when the trial ends, only the Pro-marked items stop working.
+The top of the page shows your current license status and, during the trial, how many days are left. Below that, a **Free and Pro** table lists exactly which features are Free (the quota strip) and which are Pro (Claude Code account switching, and the `open-agent-usage` command-line interface) — when the trial ends, only the Pro-marked items stop working.
 
 ![Settings — Purchase, buy and activate](docs/settings-purchase-buy.png)
 
